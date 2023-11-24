@@ -6,7 +6,7 @@ export default async function Page({
 	params: { payment_id: string };
 }) {
 	const res = await fetch(
-		`${process.env.NEXTAUTH_URL}/api/v1/posts/${params.payment_id}`
+		`${process.env.APP_URL}/api/v1/posts/${params.payment_id}`
 	);
 
 	const data = await res.text();
